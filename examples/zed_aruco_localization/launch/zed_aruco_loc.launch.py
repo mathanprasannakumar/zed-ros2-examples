@@ -17,19 +17,26 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
+
 from launch.actions import (
     DeclareLaunchArgument,
     OpaqueFunction,
     SetEnvironmentVariable
 )
+
 from launch.conditions import IfCondition
+
 from launch.substitutions import (
     LaunchConfiguration,
     Command,
     TextSubstitution
 )
+
+# Action that executes a ROS Node  
 from launch_ros.actions import Node
-from launch_ros.actions import ComposableNodeContainer
+# Action tha
+from launch_ros.actions import ComposableNodeContainer 
+# Action that describes a ros node component that can be loaded into the container with other nodes
 from launch_ros.descriptions import ComposableNode
 
 # ZED Configurations to be loaded by ZED Node
